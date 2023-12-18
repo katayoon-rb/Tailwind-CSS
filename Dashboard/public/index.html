@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <title>Tailwind</title>
+    </head>
+
+    <body class="bg-gray-200">
+        <div class="flex">
+            <!-- SIDE NAV start -->
+            <div class="bg-indigo-900 w-64">
+                <!-- LOGO -->
+                <div class="bg-indigo-800">
+                    <div class="text-gray-200 uppercase p-5 text-xl font-bold">
+                        Super Corp</div>
+                </div>
+                <!-- LOGO -->
+                
+                <!-- heading -->
+                <div>
+                    <div class="text-gray-200 uppercase p-5 text-xs font-bold">
+                        Pages</div>
+                </div>
+                <!-- heading -->
+
+                <!-- menu -->
+                <div class="flex m-5 mt-2">
+                    <div>
+                        <img class="w-5 h-5"
+                            src="./Resources/dashboard.png" alt="">
+                    </div>
+                    <div class="text-gray-100 text-sm mx-3">
+                        Dashboard</div>
+                </div>
+
+                <div class="flex m-5 mt-2">
+                    <div>
+                        <img class="w-5 h-5"
+                            src="./Resources/customers.png" alt="">
+                    </div>
+                    <div class="text-gray-100 text-sm mx-3">
+                        Customers</div>
+                </div>
+
+                <div class="flex m-5 mt-2">
+                    <div>
+                        <img class="w-5 h-5"
+                            src="./Resources/orders.png" alt="">
+                    </div>
+                    <div class="text-gray-100 text-sm mx-3">
+                        Orders</div>
+                </div>
+
+                <div class="flex m-5 mt-2">
+                    <div>
+                        <img class="w-5 h-5"
+                            src="./Resources/campaign.png" alt="">
+                    </div>
+                    <div class="text-gray-100 text-sm mx-3">
+                        Campaigns</div>
+                </div>
+
+                <div class="flex m-5 mt-2">
+                    <div>
+                        <img class="w-5 h-5"
+                            src="./Resources/messages.png" alt="">
+                    </div>
+                    <div class="text-gray-100 text-sm mx-3">
+                        Messages</div>
+                </div>
+
+                <div class="flex m-5 mt-2">
+                    <div>
+                        <img class="w-5 h-5"
+                            src="./Resources/apps.png" alt="">
+                    </div>
+                    <div class="text-gray-100 text-sm mx-3">
+                        Apps</div>
+                </div>
+
+                <div class="flex m-5 mt-2">
+                    <div>
+                        <img class="w-5 h-5"
+                            src="./Resources/settings.png" alt="">
+                    </div>
+                    <div class="text-gray-100 text-sm mx-3">
+                        Settings</div>
+                </div>
+                <!-- menu -->
+            </div>
+            <!-- SIDE NAV end -->
+
+
+            <!-- MAIN AREA start -->
+            <div class="flex-1">
+                <!-- top nav -->
+                <div>
+                    <div class="flex bg-white px-2 py-0.5 h-18">
+                        <!-- left -->
+                        <div class="flex items-center p-3 md:w-3/4 sm:w-1/3">
+                            <img class="w-10 h-10"
+                                src="./Resources/person.png" alt="">
+                            <span class="blcok p-2">Name LastName</span>
+                        </div>
+                        <!-- left -->
+
+                        <!-- right -->
+                        <div class="flex md:w-1/4 sm:w-2/3">
+                            <img class="w-7 h-7 rounded-full bg-gray-100 p-1 mx-2 my-4"
+                                src="./Resources/search.png" alt="">
+                            <img class="w-7 h-7 rounded-full bg-gray-100 p-1 mx-2 my-4"
+                                src="./Resources/message.png" alt="">
+                            <img class="w-7 h-7 rounded-full bg-gray-100 p-1 mx-2 my-4"
+                                src="./Resources/warning.png" alt="">
+                            <a class="mt-4 mx-2 text-indigo-500" href="">Log Out</a>
+                        </div>
+                        <!-- right -->
+                    </div>
+                </div>
+                <!-- top nav -->
+
+                <!-- banner -->
+                <div class="bg-indigo-200 m-7 p-6">
+                    <div class="text-4xl text-green-950 font-medium">
+                        Good Morning, Super Inc.👋</div>
+                    <div class="mt-4">
+                        These are the stars for today, have a good day.</div>
+                </div>
+                <!-- banner -->
+
+                <!-- cards -->
+                <div class="flex space-x-6 m-7">
+                    <div class="w-1/2 bg-white p-4">
+                        <div>
+                            <img class="w-10 h-10"
+                                src="./Resources/wallet.png" alt="">
+                        </div>
+
+                        <div class="font-bold text-xl text-gray-700">Super Plus</div>
+                        <div class="font-bold text-sm text-gray-400 uppercase my-3">Sales</div>
+                        
+                        <span class="font-bold text-3xl">$25,574</span>
+                        <span class="bg-green-500 rounded-full font-bold text-sm text-white p-1 align-text-top">
+                            +58%</span>
+
+                        <canvas id="chart1"></canvas>
+                    </div>
+
+                    <div class="w-1/2 bg-white p-4">
+                        <div>
+                            <img class="w-10 h-10"
+                                src="./Resources/wallet.png" alt="">
+                        </div>
+
+                        <div class="font-bold text-xl text-gray-700">Super Plus</div>
+                        <div class="font-bold text-sm text-gray-400 uppercase my-3">Sales</div>
+                        
+                        <span class="font-bold text-3xl">$14,586</span>
+                        <span class="bg-red-500 rounded-full font-bold text-sm text-white p-1 align-text-top">
+                            -9%</span>
+
+                        <canvas id="chart2"></canvas> 
+                    </div>
+                </div>
+
+                <div class="flex space-x-6 m-7">
+                    <div class="w-1/2 bg-white p-4">
+                        <div>
+                            <img class="w-10 h-10"
+                                src="./Resources/wallet.png" alt="">
+                        </div>
+
+                        <div class="font-bold text-xl text-gray-700">Super Plus</div>
+                        <div class="font-bold text-sm text-gray-400 uppercase my-3">Sales</div>
+                        
+                        <span class="font-bold text-3xl">$25,574</span>
+                        <span class="bg-green-500 rounded-full font-bold text-sm text-white p-1 align-text-top">
+                            +58%</span>
+
+                        <canvas id="chart3"></canvas>
+                    </div>
+
+                    <div class="w-1/2 bg-white p-4">
+                        <div>
+                            <img class="w-10 h-10"
+                                src="./Resources/wallet.png" alt="">
+                        </div>
+
+                        <div class="font-bold text-xl text-gray-700">Super Plus</div>
+                        <div class="font-bold text-sm text-gray-400 uppercase my-3">Sales</div>
+                        
+                        <span class="font-bold text-3xl">$14,586</span>
+                        <span class="bg-red-500 rounded-full font-bold text-sm text-white p-1 align-text-top">
+                            -9%</span>
+
+                        <canvas id="chart4"></canvas> 
+                    </div>
+                </div>
+                <!-- cards -->
+
+                <!-- cards last -->
+                <div class="flex space-x-6 m-7">
+                    <div class="w-1/3 bg-white p-4 divide-y divide-gray-200">
+                        <div class="font-bold text-lg pb-4">Top Countries</div>
+                        <canvas class="pt-4" id="chart5"></canvas>
+                    </div>
+
+                    <div class="w-2/3 bg-white p-4">
+                        <div class="font-bold text-lg pb-4">Top Channels</div>
+
+                        <div class="flex bg-gray-100 text-gray-500 p-2 uppercase font-bold text-xs">
+                            <div class="w-1/3">
+                                <div>Source</div>
+                            </div>
+                            <div class="w-3/4 flex justify-between">
+                                <div>Visitors</div>
+                                <div>Revenues</div>
+                                <div>Sales</div>
+                                <div>Conversion</div>
+                            </div>
+                        </div>
+
+                        <div class="divide-y divide-gray-200">
+                            <div class="flex py-3">
+                                <div class="w-1/3 flex items-center ">
+                                    <div>
+                                        <img class="w-8 h-8"
+                                            src="./Resources/youtube.png" alt="">
+                                    </div>
+                                    <div class="pl-2">youtube</div>
+                                </div>
+                                <div class="w-3/4 flex justify-between px-2">
+                                    <div>2.4k</div>
+                                    <div class="text-green-500">$16,000</div>
+                                    <div>340</div>
+                                    <div class="text-blue-500">4.9%</div>
+                                </div>
+                            </div>
+
+                            <div class="flex py-3">
+                                <div class="w-1/3 flex items-center ">
+                                    <div>
+                                        <img class="w-8 h-8"
+                                            src="./Resources/facebook.png" alt="">
+                                    </div>
+                                    <div class="pl-2">facebook</div>
+                                </div>
+                                <div class="w-3/4 flex justify-between px-2">
+                                    <div>2.4k</div>
+                                    <div class="text-green-500">$16,000</div>
+                                    <div>340</div>
+                                    <div class="text-blue-500">4.9%</div>
+                                </div>
+                            </div>
+
+                            <div class="flex py-3">
+                                <div class="w-1/3 flex items-center ">
+                                    <div>
+                                        <img class="w-8 h-8"
+                                            src="./Resources/github.png" alt="">
+                                    </div>
+                                    <div class="pl-2">github</div>
+                                </div>
+                                <div class="w-3/4 flex justify-between px-2">
+                                    <div>2.4k</div>
+                                    <div class="text-green-500">$16,000</div>
+                                    <div>340</div>
+                                    <div class="text-blue-500">4.9%</div>
+                                </div>
+                            </div>
+
+                            <div class="flex py-3">
+                                <div class="w-1/3 flex items-center ">
+                                    <div>
+                                        <img class="w-8 h-8"
+                                            src="./Resources/instagram.png" alt="">
+                                    </div>
+                                    <div class="pl-2">instagram</div>
+                                </div>
+                                <div class="w-3/4 flex justify-between px-2">
+                                    <div>2.4k</div>
+                                    <div class="text-green-500">$16,000</div>
+                                    <div>340</div>
+                                    <div class="text-blue-500">4.9%</div>
+                                </div>
+                            </div>
+
+                            <div class="flex py-3">
+                                <div class="w-1/3 flex items-center ">
+                                    <div>
+                                        <img class="w-8 h-8"
+                                            src="./Resources/facebook.png" alt="">
+                                    </div>
+                                    <div class="pl-2">facebook</div>
+                                </div>
+                                <div class="w-3/4 flex justify-between px-2">
+                                    <div>2.4k</div>
+                                    <div class="text-green-500">$16,000</div>
+                                    <div>340</div>
+                                    <div class="text-blue-500">4.9%</div>
+                                </div>
+                            </div>
+
+                            <div class="flex py-3">
+                                <div class="w-1/3 flex items-center ">
+                                    <div>
+                                        <img class="w-8 h-8"
+                                            src="./Resources/github.png" alt="">
+                                    </div>
+                                    <div class="pl-2">github</div>
+                                </div>
+                                <div class="w-3/4 flex justify-between px-2">
+                                    <div>2.4k</div>
+                                    <div class="text-green-500">$16,000</div>
+                                    <div>340</div>
+                                    <div class="text-blue-500">4.9%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- cards last -->
+            </div>
+            <!-- MAIN AREA end -->
+        </div>
+
+
+
+        <script>
+            const ctx1 = document.getElementById('chart1')
+            const ctx2 = document.getElementById('chart2')
+            const ctx3 = document.getElementById('chart3')
+            const ctx4 = document.getElementById('chart4')
+            const ctx5 = document.getElementById('chart5')
+          
+            new Chart(ctx1, {
+              type: 'bar',
+              data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June'],
+                datasets: [{
+                  label: 'Number of Sales',
+                  data: [12, 19, 3, 5, 2, 3],
+                  backgroundColor: [
+                    '#FD8A8A', '#FFDDDD', '#9EA1D4',
+                    '#F1F7B5', '#A8D1D1', '#DFEBEB'
+                  ]
+                }]
+              },
+              options:{ scales:{ y:{ beginAtZero: true } } }
+            })
+
+            new Chart(ctx2, {
+                type: 'line',
+                data: {
+                  labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June'],
+                  datasets: [{
+                    label: 'Number of Sales',
+                    data: [19, 5, 3, 5, 14, 12],
+                    backgroundColor: [
+                      '#FD8A8A', '#FFDDDD', '#9EA1D4',
+                      '#F1F7B5', '#A8D1D1', '#DFEBEB'
+                    ]
+                  }]
+                },
+                options:{ scales:{ y:{ beginAtZero: true } } }
+              })
+
+            new Chart(ctx3, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June'],
+                    datasets: [{
+                    label: 'Number of Sales',
+                    data: [19, 5, 3, 5, 14, 12],
+                    backgroundColor: [
+                        '#FD8A8A', '#FFDDDD', '#9EA1D4',
+                        '#F1F7B5', '#A8D1D1', '#DFEBEB'
+                    ]
+                    }]
+                },
+                options:{ scales:{ y:{ beginAtZero: true } } }
+            })
+
+            new Chart(ctx4, {
+                type: 'radar',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June'],
+                    datasets: [{
+                    label: 'Number of Sales',
+                    data: [19, 5, 3, 5, 14, 12],
+                    backgroundColor: [
+                        '#FD8A8A', '#FFDDDD', '#9EA1D4',
+                        '#F1F7B5', '#A8D1D1', '#DFEBEB'
+                    ]
+                    }]
+                },
+                options:{ scales:{ y:{ beginAtZero: true } } }
+            })
+
+            new Chart(ctx5, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June'],
+                    datasets: [{
+                    label: 'Number of Sales',
+                    data: [1, 7, 19, 4, 14, 17],
+                    backgroundColor: [
+                        '#FD8A8A', '#FFDDDD', '#9EA1D4',
+                        '#F1F7B5', '#A8D1D1', '#DFEBEB'
+                    ]
+                    }]
+                },
+                options:{ scales:{ y:{ beginAtZero: true } } }
+            })
+        </script>
+    </body>
+</html>
